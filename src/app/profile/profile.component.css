@@ -1,0 +1,10 @@
+.main {
+  border: black 1px solid;
+  text-align: center;
+  padding: 5px 50px;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+}

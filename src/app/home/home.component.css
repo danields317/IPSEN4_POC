@@ -1,0 +1,13 @@
+header {
+  text-align: center;
+}
+
+header img{
+  max-height: 100px;
+}
+
+.add{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

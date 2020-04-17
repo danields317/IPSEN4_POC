@@ -1,0 +1,27 @@
+<header>
+  <img src="../../assets/imgs/RodinLogo.png">
+  <h1>Rodin consultancy Proof of concept</h1>
+</header>
+<div *ngFor="let profile of profiles" class="profiles">
+  <app-profile [profile]="profile" (update)="getProfiles()"></app-profile>
+</div>
+<div class="add">
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="id">
+    profile_id
+  </label>
+  <input id="id" formControlName="profile_id">
+  <label for="name">
+    Name
+  </label>
+  <input id="name" formControlName="first_name">
+  <label for="enabled">enabled</label>
+  <select id="enabled" formControlName="enabled">
+    <option value="true">true</option>
+    <option value="false">false</option>
+  </select>
+  <button type="submit">Add profile</button>
+</form>
+  <button (click)="update()">Update profile</button>
+  <small *ngIf="errormessage">{{errormessage}}</small>
+</div>
